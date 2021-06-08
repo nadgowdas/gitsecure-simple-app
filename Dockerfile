@@ -1,4 +1,4 @@
-FROM us.icr.io/gitsecure/golang:1.16.4-buster
+FROM us.icr.io/gitsecure/golang:1.15-buster
 WORKDIR /go/src/github.com/gitsecure-simple-app
 COPY app.go .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app app.go
